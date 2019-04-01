@@ -3,25 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		27AB4EE32251DB580097B59A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EE22251DB580097B59A /* AppDelegate.swift */; };
-		27AB4EE52251DB580097B59A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EE42251DB580097B59A /* ViewController.swift */; };
+		27AB4EE52251DB580097B59A /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EE42251DB580097B59A /* ChecklistViewController.swift */; };
 		27AB4EE82251DB580097B59A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EE62251DB580097B59A /* Main.storyboard */; };
 		27AB4EEA2251DB580097B59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EE92251DB580097B59A /* Assets.xcassets */; };
 		27AB4EED2251DB580097B59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EEB2251DB580097B59A /* LaunchScreen.storyboard */; };
+		27AB4EF52251DBC80097B59A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EF42251DBC80097B59A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27AB4EDF2251DB580097B59A /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB4EE22251DB580097B59A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27AB4EE42251DB580097B59A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27AB4EE42251DB580097B59A /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		27AB4EE72251DB580097B59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27AB4EE92251DB580097B59A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AB4EEC2251DB580097B59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AB4EEE2251DB580097B59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AB4EF42251DBC80097B59A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		27AB4ED62251DB580097B59A = {
 			isa = PBXGroup;
 			children = (
+				27AB4EF42251DBC80097B59A /* .gitignore */,
 				27AB4EE12251DB580097B59A /* Checklists */,
 				27AB4EE02251DB580097B59A /* Products */,
 			);
@@ -55,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				27AB4EE22251DB580097B59A /* AppDelegate.swift */,
-				27AB4EE42251DB580097B59A /* ViewController.swift */,
+				27AB4EE42251DB580097B59A /* ChecklistViewController.swift */,
 				27AB4EE62251DB580097B59A /* Main.storyboard */,
 				27AB4EE92251DB580097B59A /* Assets.xcassets */,
 				27AB4EEB2251DB580097B59A /* LaunchScreen.storyboard */,
@@ -100,7 +103,7 @@
 				};
 			};
 			buildConfigurationList = 27AB4EDA2251DB580097B59A /* Build configuration list for PBXProject "Checklists" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AB4EF52251DBC80097B59A /* .gitignore in Resources */,
 				27AB4EED2251DB580097B59A /* LaunchScreen.storyboard in Resources */,
 				27AB4EEA2251DB580097B59A /* Assets.xcassets in Resources */,
 				27AB4EE82251DB580097B59A /* Main.storyboard in Resources */,
@@ -135,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AB4EE52251DB580097B59A /* ViewController.swift in Sources */,
+				27AB4EE52251DB580097B59A /* ChecklistViewController.swift in Sources */,
 				27AB4EE32251DB580097B59A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3Z2Z567H;
 				INFOPLIST_FILE = Checklists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3Z2Z567H;
 				INFOPLIST_FILE = Checklists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
