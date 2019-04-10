@@ -2,49 +2,52 @@
 //  ViewController.swift
 //  Checklists
 //
-//  Created by LeeYunSeok on 01/04/2019.
-//  Copyright © 2019 LeeYunSeok. All rights reserved.
+//  Created by Myoung-Wan Koo on 30/03/2019.
+//  Copyright © 2019 Myoung-Wan Koo. All rights reserved.
 //
 
 import UIKit
 
-class ChecklistViewController: UITableViewController,AddItemViewControllerDelegate {
+class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
     
     var items = [ChecklistItem]()
     /* Initialization */
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         let item1 = ChecklistItem()
         item1.text = "Walk the dog"
         items.append(item1)
-    
+        
         let item2 = ChecklistItem()
         item2.text = "Brush my teeth"
         item2.checked = true
         items.append(item2)
-    
+        
         let item3 = ChecklistItem()
         item3.text = "Learn iOS development"
         item3.checked = true
         items.append(item3)
-    
+        
         let item4 = ChecklistItem()
         item4.text = "Soccer practice"
         items.append(item4)
-    
+        
         let item5 = ChecklistItem()
         item5.text = "Eat ice cream"
         items.append(item5)
-        
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
+        
+        let label = cell.viewWithTag(1001) as! UILabel
+        
         if item.checked {
-                cell.accessoryType = .checkmark
+            label.text = "√"
         } else {
-                cell.accessoryType = .none
+            label.text = ""
         }
+        
     }
     
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
@@ -79,29 +82,32 @@ class ChecklistViewController: UITableViewController,AddItemViewControllerDelega
         return items.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
-    
-        let item = items[indexPath.row]
-    
-        configureText(for: cell, with: item)
-        configureCheckmark(for: cell, with: item)
-        return cell
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) ->
+        UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
+            
+            let item = items[indexPath.row]
+            
+            configureText(for: cell, with: item)
+            configureCheckmark(for: cell, with: item)
+            return cell
     }
     
     
     // MARK:- Table View Delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             /* Using data Source */
             let item = items[indexPath.row]
             item.toggleChecked()
             configureCheckmark(for: cell, with: item)
-    
+            
         }
-    
+        
         tableView.deselectRow(at: indexPath, animated: true)
-    
+        
     }
     
     // MARK:- Add Item ViewController Delegates
@@ -109,6 +115,7 @@ class ChecklistViewController: UITableViewController,AddItemViewControllerDelega
         navigationController?.popViewController(animated:true)
     }
     
+    /* For adding */
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
         let newRowIndex = items.count
         items.append(item)
@@ -120,14 +127,31 @@ class ChecklistViewController: UITableViewController,AddItemViewControllerDelega
         navigationController?.popViewController(animated:true)
     }
     
+    func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem) {
+        if let index = items.index(of: item) {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                configureText(for: cell, with: item)
+            }
+        }
+        navigationController?.popViewController(animated:true)
+    }
+    
+    
     // MARK:- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddItem" {
             let controller = segue.destination as! AddItemViewController
             controller.delegate = self
+        } else if segue.identifier == "EditItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+            
+            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                controller.itemToEdit = items[indexPath.row]
+            }
         }
     }
     
-
 }
 

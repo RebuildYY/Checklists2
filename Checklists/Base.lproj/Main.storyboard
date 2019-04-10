@@ -18,15 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="TXX-DR-LsL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="TXX-DR-LsL">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TXX-DR-LsL" id="eFs-ew-W86">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-FP-yvc">
-                                            <rect key="frame" x="31" y="11" width="316" height="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQZ-TI-KrD">
+                                            <rect key="frame" x="0.0" y="11" width="18" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-FP-yvc">
+                                            <rect key="frame" x="26" y="10" width="286" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -35,10 +42,12 @@
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="MHM-FP-yvc" secondAttribute="bottom" id="2sx-yu-bjd"/>
                                         <constraint firstItem="MHM-FP-yvc" firstAttribute="top" secondItem="eFs-ew-W86" secondAttribute="topMargin" id="4eB-bi-tuv"/>
-                                        <constraint firstItem="MHM-FP-yvc" firstAttribute="trailing" secondItem="eFs-ew-W86" secondAttribute="trailingMargin" constant="20" id="bOf-Vv-x80"/>
                                         <constraint firstItem="MHM-FP-yvc" firstAttribute="leading" secondItem="eFs-ew-W86" secondAttribute="leadingMargin" constant="15" id="qmk-fv-zpo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PxV-iG-h87" kind="show" identifier="EditItem" trigger="accessoryAction" id="tYR-om-Nen"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -138,4 +147,7 @@
             <point key="canvasLocation" x="120.8" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tYR-om-Nen"/>
+    </inferredMetricsTieBreakers>
 </document>
