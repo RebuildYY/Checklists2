@@ -16,6 +16,7 @@
 		27AB4EEA2251DB580097B59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EE92251DB580097B59A /* Assets.xcassets */; };
 		27AB4EED2251DB580097B59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EEB2251DB580097B59A /* LaunchScreen.storyboard */; };
 		27AB4EF52251DBC80097B59A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EF42251DBC80097B59A /* .gitignore */; };
+		27F7A5812260204B0060C6EA /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7A5802260204B0060C6EA /* Checklist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		27AB4EEC2251DB580097B59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AB4EEE2251DB580097B59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AB4EF42251DBC80097B59A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		27F7A5802260204B0060C6EA /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				27AB4EEE2251DB580097B59A /* Info.plist */,
 				27A41033225DCC0B0047DBD7 /* AddItemViewController.swift */,
 				27A41035225DE6BE0047DBD7 /* AllListsViewController.swift */,
+				27F7A5802260204B0060C6EA /* Checklist.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				27AB4EE52251DB580097B59A /* ChecklistViewController.swift in Sources */,
 				27A41034225DCC0B0047DBD7 /* AddItemViewController.swift in Sources */,
+				27F7A5812260204B0060C6EA /* Checklist.swift in Sources */,
 				27A41032225DC5EA0047DBD7 /* ChecklistItem.swift in Sources */,
 				27A41036225DE6BE0047DBD7 /* AllListsViewController.swift in Sources */,
 				27AB4EE32251DB580097B59A /* AppDelegate.swift in Sources */,
