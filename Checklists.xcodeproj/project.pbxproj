@@ -17,6 +17,7 @@
 		27AB4EED2251DB580097B59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EEB2251DB580097B59A /* LaunchScreen.storyboard */; };
 		27AB4EF52251DBC80097B59A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4EF42251DBC80097B59A /* .gitignore */; };
 		27F7A5812260204B0060C6EA /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7A5802260204B0060C6EA /* Checklist.swift */; };
+		27F7A587226030730060C6EA /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7A586226030730060C6EA /* ListDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		27AB4EEE2251DB580097B59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AB4EF42251DBC80097B59A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		27F7A5802260204B0060C6EA /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		27F7A586226030730060C6EA /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				27A41033225DCC0B0047DBD7 /* AddItemViewController.swift */,
 				27A41035225DE6BE0047DBD7 /* AllListsViewController.swift */,
 				27F7A5802260204B0060C6EA /* Checklist.swift */,
+				27F7A586226030730060C6EA /* ListDetailViewController.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27AB4EE52251DB580097B59A /* ChecklistViewController.swift in Sources */,
+				27F7A587226030730060C6EA /* ListDetailViewController.swift in Sources */,
 				27A41034225DCC0B0047DBD7 /* AddItemViewController.swift in Sources */,
 				27F7A5812260204B0060C6EA /* Checklist.swift in Sources */,
 				27A41032225DC5EA0047DBD7 /* ChecklistItem.swift in Sources */,
