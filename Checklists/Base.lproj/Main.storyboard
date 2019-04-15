@@ -226,6 +226,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="idX-ZD-S3h" id="KN2-ii-wuj"/>
                         <outlet property="textField" destination="V2N-40-OcD" id="B3B-88-fKV"/>
                     </connections>
                 </tableViewController>
